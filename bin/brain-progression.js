@@ -7,6 +7,8 @@ console.log('Welcome to the Brain Games!');
 let name = readlineSync.question('May I have your name? ');
 console.log('Hello, ' + name + '!');
 
+console.log('What number is missing in the progression?')
+
 function progression () {
     let correctCount = 0;
     while (correctCount < 3) {

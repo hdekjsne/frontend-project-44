@@ -14,3 +14,6 @@
 
 ######progression
 <a href="https://asciinema.org/a/v4qMi9Nv6mHlEH19yJ2dyFLip" target="_blank"><img src="https://asciinema.org/a/v4qMi9Nv6mHlEH19yJ2dyFLip.svg" /></a>
+
+######isPrime
+<a href="https://asciinema.org/a/oGXwIfSuL1rjFz6KOx9UVJtnE" target="_blank"><img src="https://asciinema.org/a/oGXwIfSuL1rjFz6KOx9UVJtnE.svg" /></a>
