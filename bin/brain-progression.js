@@ -13,8 +13,8 @@ function progression () {
     let lastWord = 'Congratulations, ' + name + '!';
     let correctCount = 0;
     while (correctCount < 3) {
-        const firstNum = Math.floor(Math.random() * 20);
-        const diff = Math.floor(Math.random() * 30);
+        const firstNum = Math.floor(Math.random() * 10);
+        const diff = Math.floor(Math.random() * 15);
 
         let numbers = [];
         numbers.push(firstNum);
