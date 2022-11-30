@@ -11,7 +11,7 @@ console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 function realIsPrime(number) {
   const dividorStock = [];
-  for (let i = 1; i < number; i+= 1) {
+  for (let i = 1; i < number; i += 1) {
     if (number % i === 0) {
       dividorStock.push(i);
     }
@@ -21,7 +21,6 @@ function realIsPrime(number) {
   } 
   return false;
 }
-
 function isPrime() {
   let lastWord = `Congratulations, ${name}!`;
   let correctCount = 0;
@@ -41,7 +40,7 @@ function isPrime() {
         }
         break;
 
-      case false:
+      default:
         if (answer === 'no') {
           correctCount += 1;
           console.log('Correct!');
