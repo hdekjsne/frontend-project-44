@@ -18,7 +18,7 @@ function realIsPrime(number) {
   }
   if (dividorStock.length === 1) {
     return true;
-  } 
+  }
   return false;
 }
 function isPrime() {
