@@ -46,7 +46,7 @@ function gcd () {
             correctCount++;
             console.log('Correct!');
         } else {
-            lastWord = answer + ' is wrong answer ;(. Correct answer was ' + gcd;
+            lastWord = `'${answer}' is wrong answer. Correct answer was '${gcd}'.\nLet's try again, ${name}!`
             correctCount = 3;
         }
     }

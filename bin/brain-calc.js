@@ -27,7 +27,7 @@ function calc () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    lastWord = answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) + Number(second));
+                    lastWord = `'${answer}' is wrong answer. Correct answer was '${Number(first) + Number(second)}'.\nLet's try again, ${name}!`
                     correctCount = 3;
                 }        
                 break;
@@ -37,7 +37,7 @@ function calc () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    lastWord = answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) - Number(second));
+                    lastWord = `'${answer}' is wrong answer. Correct answer was '${Number(first) - Number(second)}'.\nLet's try again, ${name}!`
                     correctCount = 3;
                 }
                 break;
@@ -47,7 +47,7 @@ function calc () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    lastWord =  answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) * Number(second));
+                    lastWord = `'${answer}' is wrong answer. Correct answer was '${Number(first) * Number(second)}'.\nLet's try again, ${name}!`
                     correctCount = 3;
                 }
                 break;

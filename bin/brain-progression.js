@@ -34,7 +34,7 @@ function progression () {
             correctCount++;
             console.log('Correct!');
         } else {
-            lastWord = 'Answer was ' + missing + '. Try again, ' + name + '. You can do better!';
+            lastWord = `'${answer}' is wrong answer. Correct answer was '${missing}'.\nLet's try again, ${name}!`;
             correctCount = 3;
         }
     }

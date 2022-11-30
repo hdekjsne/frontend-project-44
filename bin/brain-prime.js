@@ -37,7 +37,7 @@ function isPrime () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    lastWord = 'Sorry, your answer\'s wrong.';
+                    lastWord = `'no' is wrong answer. Correct answer was 'yes'.\nLet's try again, ${name}!`
                     correctCount = 3;
                 }
                 break;
@@ -47,7 +47,7 @@ function isPrime () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    lastWord = 'It was false ;(';
+                    lastWord = `'yes' is wrong answer. Correct answer was 'no'.\nLet's try again, ${name}!`
                     correctCount = 3;
                 }
                 break

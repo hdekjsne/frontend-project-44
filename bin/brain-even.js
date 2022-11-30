@@ -28,7 +28,7 @@ function isEven () {
                         break;
 
                     case 'no':
-                        lastWord = `'no' is wrong answer ;(. Correct answer was 'yes'.`;
+                        lastWord = `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ` + name + '!';
                         correctCount = 3;
                         break;
                 }
@@ -37,7 +37,7 @@ function isEven () {
             case false:
                 switch (answer) {
                     case 'yes':
-                        lastWord = `'yes' is wrong answer ;(. Correct answer was 'no'.`;
+                        lastWord = `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ` + name + '!';
                         correctCount = 3;
                         break;
 
