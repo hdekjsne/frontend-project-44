@@ -39,8 +39,8 @@ function gcd() {
   let lastWord = 'Congratulations, ' + name + '!';
   let correctCount = 0;
   while (correctCount < 3) {
-    let first = Math.floor(Math.random() * 50);
-    let second = Math.floor(Math.random() * 50);
+    let first = Math.floor(Math.random() * 50 + 1);
+    let second = Math.floor(Math.random() * 50 + 1);
     let gcd = cd(first, second);
     console.log(`Question: ${first} ${second}`);
     let answer = readlineSync.question('Your answer: ');
