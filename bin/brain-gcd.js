@@ -5,11 +5,11 @@ import readlineSync from 'readline-sync';
 console.log('Welcome to the Brain Games!');
 
 let name = readlineSync.question('May I have your name? ');
-console.log('Hello, ' + name + '!');
+console.log(`Hello, ${name}!`);
 
 console.log('Find the greatest common divisor of given numbers.');
 
-function cd (a, b) {
+function cd(a, b) {
     const dividors1 = [];
     const dividors2 = [];
     let gcd = 0;
@@ -35,14 +35,14 @@ function cd (a, b) {
     return gcd;
 }
 
-function gcd () {
+function gcd() {
     let lastWord = 'Congratulations, ' + name + '!';
     let correctCount = 0;
     while (correctCount < 3) {
         let first = Math.floor(Math.random() * 50);
         let second = Math.floor(Math.random() * 50);
         let gcd = cd(first, second);
-        console.log('Question: ' + first + ' ' + second);
+        console.log(`Question: ${first} ${second}`);
         let answer = readlineSync.question('Your answer: ');
         if (Number(answer) === gcd) {
             correctCount++;
