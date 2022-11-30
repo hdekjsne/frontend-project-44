@@ -10,6 +10,7 @@ console.log('Hello, ' + name + '!');
 console.log('What number is missing in the progression?')
 
 function progression () {
+    let lastWord = 'Congratulations, ' + name + '!';
     let correctCount = 0;
     while (correctCount < 3) {
         const firstNum = Math.floor(Math.random() * 20);
@@ -33,10 +34,11 @@ function progression () {
             correctCount++;
             console.log('Correct!');
         } else {
-            console.log('Answer was ' + missing + '. Try again, ' + name + '. You can do better!');
+            lastWord = 'Answer was ' + missing + '. Try again, ' + name + '. You can do better!';
+            correctCount = 3;
         }
     }
-    console.log('Congratulation, ' + name + '!');
+    console.log(lastWord);
 }
 
 progression();

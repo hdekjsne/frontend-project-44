@@ -11,6 +11,7 @@ console.log(`Answer "yes" if the number is even, otherwise answer "no"`);
 
 let randomNum = Math.round(Math.random() * 1000);
 let correctCount = 0;
+let lastWord = 'Congratulations, ' + name + '!';
 
 function isEven () {
     while (correctCount < 3) {
@@ -27,8 +28,8 @@ function isEven () {
                         break;
 
                     case 'no':
-                        console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.`)
-                        randomNum = Math.round(Math.random() * 1000);
+                        lastWord = `'no' is wrong answer ;(. Correct answer was 'yes'.`;
+                        correctCount = 3;
                         break;
                 }
                 break;
@@ -36,8 +37,8 @@ function isEven () {
             case false:
                 switch (answer) {
                     case 'yes':
-                        console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.`);
-                        randomNum = Math.round(Math.random() * 1000);
+                        lastWord = `'yes' is wrong answer ;(. Correct answer was 'no'.`;
+                        correctCount = 3;
                         break;
 
                     case 'no':
@@ -49,7 +50,7 @@ function isEven () {
             break;
         }
     }
-    console.log(`Congratulations, ` + name + '!');
+    console.log(lastWord);
 }
 
 isEven();

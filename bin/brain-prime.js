@@ -24,6 +24,7 @@ function realIsPrime (number) {
 }
 
 function isPrime () {
+    let lastWord = 'Congratulations, ' + name + '!';
     let correctCount = 0;
     while (correctCount < 3) {
         let num = Math.floor(Math.random() * 500);
@@ -36,7 +37,8 @@ function isPrime () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    console.log('Sorry, your answer\'s wrong.');
+                    lastWord = 'Sorry, your answer\'s wrong.';
+                    correctCount = 3;
                 }
                 break;
 
@@ -45,12 +47,13 @@ function isPrime () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    console.log('It was false ;(');
+                    lastWord = 'It was false ;(';
+                    correctCount = 3;
                 }
                 break
         }
     }
-    console.log('Congratulations, ' + name + '!');
+    console.log(lastWord);
 }
 
 isPrime();

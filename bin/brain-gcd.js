@@ -34,6 +34,7 @@ function cd (a, b) {
 }
 
 function gcd () {
+    let lastWord = 'Congratulations, ' + name + '!';
     let correctCount = 0;
     while (correctCount < 3) {
         let first = Math.floor(Math.random() * 50);
@@ -45,10 +46,11 @@ function gcd () {
             correctCount++;
             console.log('Correct!');
         } else {
-            console.log(answer + ' is wrong answer ;(. Correct answer was ' + gcd);
+            lastWord = answer + ' is wrong answer ;(. Correct answer was ' + gcd;
+            correctCount = 3;
         }
     }
-    console.log('Congratulations, ' + name + '!');
+    console.log(lastWord);
 }
 
 gcd();

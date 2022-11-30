@@ -12,6 +12,8 @@ console.log('What is the result of the expression?');
 function calc () {
     const operators = ['+', '-', '*'];
     let correctCount = 0;
+    let lastWord = 'Congratulations, ' + name + '!';
+
     while (correctCount < 3) {
         let randomOper = operators[Math.floor(Math.random() * 3)];
         let first = Math.round(Math.random() * 100);
@@ -25,7 +27,8 @@ function calc () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    console.log(answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) + Number(second)));
+                    lastWord = answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) + Number(second));
+                    correctCount = 3;
                 }        
                 break;
 
@@ -34,7 +37,8 @@ function calc () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    console.log(answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) - Number(second)));
+                    lastWord = answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) - Number(second));
+                    correctCount = 3;
                 }
                 break;
 
@@ -43,12 +47,13 @@ function calc () {
                     correctCount++;
                     console.log('Correct!');
                 } else {
-                    console.log(answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) * Number(second)))
+                    lastWord =  answer + ' is wrong answer ;(. Correct answer was ' + (Number(first) * Number(second));
+                    correctCount = 3;
                 }
                 break;
         }
     }
-    console.log('Congratulations, ' + name + '!')
+    console.log(lastWord)
 }
 
 calc();
