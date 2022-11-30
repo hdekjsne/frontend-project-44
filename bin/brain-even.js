@@ -14,43 +14,43 @@ let correctCount = 0;
 let lastWord = `Congratulations, ${name}!`;
 
 function isEven() {
-    while (correctCount < 3) {
-        console.log(`Question: ${randomNum}`);
-        let answer = readlineSync.question('Your answer: ', { limit: ['yes', 'no'] });
-        let boolean = (randomNum % 2 === 0);
-        switch (boolean) {
-            case true:
-                switch (answer) {
-                    case 'yes':
-                        console.log('Correct!');
-                        randomNum = Math.round(Math.random() * 1000);
-                        correctCount++;
-                        break;
+  while (correctCount < 3) {
+    console.log(`Question: ${randomNum}`);
+    let answer = readlineSync.question('Your answer: ', { limit: ['yes', 'no'] });
+    let boolean = (randomNum % 2 === 0);
+    switch (boolean) {
+      case true:
+        switch (answer) {
+          case 'yes':
+            console.log('Correct!');
+            randomNum = Math.round(Math.random() * 1000);
+            correctCount++;
+            break;
 
-                    case 'no':
-                        lastWord = `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}!`;
-                        correctCount = 3;
-                        break;
-                }
-                break;
-
-            case false:
-                switch (answer) {
-                    case 'yes':
-                        lastWord = `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`;
-                        correctCount = 3;
-                        break;
-
-                    case 'no':
-                        console.log('Correct!');
-                        randomNum = Math.round(Math.random() * 1000);
-                        correctCount++;
-                        break;
-                }
-                break;
+          case 'no':
+            lastWord = `'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${name}!`;
+            correctCount = 3;
+            break;
         }
+        break;
+
+      case false:
+        switch (answer) {
+          case 'yes':
+            lastWord = `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${name}!`;
+            correctCount = 3;
+            break;
+
+          case 'no':
+            console.log('Correct!');
+            randomNum = Math.round(Math.random() * 1000);
+            correctCount++;
+            break;
+        }
+        break;
     }
-    console.log(lastWord);
+  }
+  console.log(lastWord);
 }
 
 isEven();

@@ -14,12 +14,11 @@ function calc() {
   let correctCount = 0;
   let lastWord = `Congratulations, ${name}!`;
 
-
   while (correctCount < 3) {
-    let randomOper = operators[Math.floor(Math.random() * 3)];
-    let first = Math.round(Math.random() * 100);
-    let second = Math.round(Math.random() * 100);
-    let expression = first + ' ' + randomOper + ' ' + second;
+    const randomOper = operators[Math.floor(Math.random() * 3)];
+    const first = Math.round(Math.random() * 100);
+    const second = Math.round(Math.random() * 100);
+    const expression = first + ' ' + randomOper + ' ' + second;
     console.log(`Question: ${expression}`);
     let answer = readlineSync.question('Your answer: ');
     switch (randomOper) {
