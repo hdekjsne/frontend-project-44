@@ -26,7 +26,7 @@ function progression () {
         let missing = numbers[gapIndex];
         numbers[gapIndex] = '..'
 
-        console.log('Question: ' + numbers.join(', '));
+        console.log('Question: ' + numbers.join(' '));
 
         const answer = readlineSync.question('Answer: ');
 
