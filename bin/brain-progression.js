@@ -18,13 +18,13 @@ function progression () {
 
         let numbers = [];
         numbers.push(firstNum);
-        for (let i = 1; i < 4; i++) {
+        for (let i = 1; i < 5; i++) {
             numbers.push(numbers[i - 1] + diff);
         }
         
-        const gapIndex = Math.floor(Math.random() * 4);
+        const gapIndex = Math.floor(Math.random() * 5);
         let missing = numbers[gapIndex];
-        numbers[gapIndex] = '...'
+        numbers[gapIndex] = '..'
 
         console.log('Question: ' + numbers.join(', '));
 
