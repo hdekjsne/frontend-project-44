@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import askName from '../cli.js'
+import askName from '../cli.js';
 
 function realIsPrime(number) {
   const dividorStock = [];
@@ -14,7 +14,7 @@ function realIsPrime(number) {
   return false;
 }
 
-export function isPrime() {
+function isPrime() {
   const name = askName();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let lastWord = `Congratulations, ${name}!`;
@@ -48,3 +48,5 @@ export function isPrime() {
   }
   console.log(lastWord);
 }
+
+export default isPrime;

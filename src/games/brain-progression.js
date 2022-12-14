@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
 
-export function progression() {
+function progression() {
   const name = askName();
   console.log('What number is missing in the progression?');
   let lastWord = `Congratulations, ${name}!`;
@@ -34,3 +34,5 @@ export function progression() {
   }
   console.log(lastWord);
 }
+
+export default progression;

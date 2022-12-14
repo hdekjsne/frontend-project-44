@@ -1,8 +1,8 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
 
-export function calc() {
-  let name = askName();
+function calc() {
+  const name = askName();
   console.log('What is the result of the expression?');
   const operators = ['+', '-', '*'];
   let correctCount = 0;
@@ -49,3 +49,5 @@ export function calc() {
   }
   console.log(lastWord);
 }
+
+export default calc;

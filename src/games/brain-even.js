@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
 
-export function isEven() {
+function isEven() {
   const name = askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
   let randomNum = Math.round(Math.random() * 1000);
@@ -46,3 +46,5 @@ export function isEven() {
   }
   console.log(lastWord);
 }
+
+export default isEven;

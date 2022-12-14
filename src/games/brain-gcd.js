@@ -17,7 +17,7 @@ function cd(a, b) {
   return currentCD;
 }
 
-export function gcd() {
+function gcd() {
   const name = askName();
   let lastWord = `Congratulations, ${name}!`;
   console.log('Find the greatest common divisor of given numbers.');
@@ -38,3 +38,5 @@ export function gcd() {
   }
   console.log(lastWord);
 }
+
+export default gcd;
