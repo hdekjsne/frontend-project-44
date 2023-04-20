@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
-import { getRandomNum } from '../utils.js';
+import getRandomNum from '../utils.js';
 
 function calc() {
   const name = askName();
