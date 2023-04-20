@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
+import { getRandomNum } from '../utils.js';
 
 function cd(a, b) {
   let smallest = 0;
@@ -23,8 +24,8 @@ function gcd() {
   console.log('Find the greatest common divisor of given numbers.');
   let correctCount = 0;
   while (correctCount < 3) {
-    const first = Math.floor(Math.random() * 50 + 1);
-    const second = Math.floor(Math.random() * 50 + 1);
+    const first = getRandomNum(50) + 1;
+    const second = getRandomNum(50) + 1;
     const greatestD = cd(first, second);
     console.log(`Question: ${first} ${second}`);
     const answer = readlineSync.question('Your answer: ');

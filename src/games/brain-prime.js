@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
+import { getRandomNum } from '../utils.js';
 
 function realIsPrime(number) {
   const dividorStock = [];
@@ -20,7 +21,7 @@ function isPrime() {
   let lastWord = `Congratulations, ${name}!`;
   let correctCount = 0;
   while (correctCount < 3) {
-    const num = Math.floor(Math.random() * 500);
+    const num = getRandomNum(500);
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ', { limit: ['yes', 'no'] });
     const boolean = realIsPrime(num);

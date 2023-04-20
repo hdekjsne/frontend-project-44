@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
+import { getRandomNum } from '../utils.js';
 
 function progression() {
   const name = askName();
@@ -7,8 +8,8 @@ function progression() {
   let lastWord = `Congratulations, ${name}!`;
   let correctCount = 0;
   while (correctCount < 3) {
-    const firstNum = Math.floor(Math.random() * 10);
-    const diff = Math.floor(Math.random() * 15);
+    const firstNum = getRandomNum(10);
+    const diff = getRandomNum(15);
 
     const numbers = [];
     numbers.push(firstNum);

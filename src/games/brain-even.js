@@ -1,10 +1,11 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
+import { getRandomNum } from '../utils.js';
 
 function isEven() {
   const name = askName();
   console.log('Answer "yes" if the number is even, otherwise answer "no"');
-  let randomNum = Math.round(Math.random() * 1000);
+  let randomNum = getRandomNum(1000);
   let correctCount = 0;
   let lastWord = `Congratulations, ${name}!`;
 
@@ -17,7 +18,7 @@ function isEven() {
         switch (answer) {
           case 'yes':
             console.log('Correct!');
-            randomNum = Math.round(Math.random() * 1000);
+            randomNum = getRandomNum(1000);
             correctCount += 1;
             break;
 
@@ -37,7 +38,7 @@ function isEven() {
 
           default:
             console.log('Correct!');
-            randomNum = Math.round(Math.random() * 1000);
+            randomNum = getRandomNum(1000);
             correctCount += 1;
             break;
         }

@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import askName from '../cli.js';
+import { getRandomNum } from '../utils.js';
 
 function calc() {
   const name = askName();
@@ -9,9 +10,9 @@ function calc() {
   let lastWord = `Congratulations, ${name}!`;
 
   while (correctCount < 3) {
-    const randomOper = operators[Math.floor(Math.random() * 3)];
-    const first = Math.round(Math.random() * 100);
-    const second = Math.round(Math.random() * 100);
+    const randomOper = operators[getRandomNum(3)];
+    const first = getRandomNum(100);
+    const second = getRandomNum(100);
     const expression = `${first} ${randomOper} ${second}`;
     console.log(`Question: ${expression}`);
     const answer = readlineSync.question('Your answer: ');
