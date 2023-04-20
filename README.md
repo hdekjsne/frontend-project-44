@@ -5,6 +5,7 @@ is a collection of CLI games. It includes the following:
 + greatest common divisor
 + progression
 + isPrime  
+
 You can find the description for each of them below.
 
 ### Hexlet tests and linter status:
