@@ -45,4 +45,4 @@ The logic of this one is close to the first game. Find out, if the givven number
 
 ***
 
-This is a student project done by me for [Hexlet](https://ru.hexlet.io).
+This is a student project done while studying at [Hexlet](https://ru.hexlet.io).
